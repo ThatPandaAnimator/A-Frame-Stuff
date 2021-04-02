@@ -1,0 +1,445 @@
+<!DOCTYPE html><html><head>
+        <meta charset="UTF-8">
+        <title>A-Frame</title>
+            <!-- A-Frame library -->
+      <script src="aframe.min.js"></script>
+
+      <!-- A-Frame physics library -->
+      <script src="aframe-physics-system.min.js"></script>
+
+      <!-- A-Frame extras library for vr controlers and other stuff  -->
+      <script src="aframe-extras.min.js"></script>
+
+      <!-- A-Frame HREF component library -->
+      <script src="a-frame-href.js"></script>
+
+      <!-- particle system library -->
+      <script src="aframe-particle-system-component.min.js">         </script>
+
+      <!-- efor the nav mesh -->
+      <script src="aframe-inspector-plugin-recast.js"></script>
+
+    </head>
+    <body>
+    <a-scene physics="" cursor="rayOrigin: mouse" inspector-plugin-recast="">
+
+<!-- Camera -->
+      <a-entity id="rig" position="0 1.5 0" movement-controls="">
+      <a-entity id="camera" camera="" look-controls=""></a-entity>
+      <a-box id="box1" dynamic-body="shape: box; mass:0" visible="false" position="0 0 0" width=".25" height=".25" depth=".25"></a-box>
+    </a-entity>
+
+<!-- Assets -->
+      <a-assets img="" src="Carpet.jpg" id="Floor"> </a-assets>
+      <a-assets img="" src="Wood Panels.jpg" id="Shelves"> </a-assets>
+      <a-assets img="" src="Wallpaper.jpg" id="Wall"> </a-assets>
+      <a-assets img="" src="Wallpapers.jpg" id="Walls"> </a-assets>
+      <a-assets-item src="Bookshelf.obj" id="Shelf"> </a-assets-item>
+
+<!-- Light -->
+    <a-light type="point" color="white" intensity=".75" position="0 6 0">
+    </a-light>
+
+<!-- Shelves-->
+    <a-entity static-body="shape:box" obj-model="obj: #Shelf" position="0 .5 -3.5255" scale=".015 .015 .015" color="#a17016" material="src: #Shelves;">
+    </a-entity>
+    <a-entity static-body="shape:box" obj-model="obj: #Shelf" position="0 3.2 -3.5255" scale=".015 .015 .015" color="#a17016" material="src: #Shelves;">
+    </a-entity>
+    <a-entity static-body="shape:box" obj-model="obj: #Shelf" position="3.38 .5 -2.005" rotation="0 -57.361 0" scale=".015 .015 .015" material="src: #Shelves;">
+    </a-entity>
+    <a-entity static-body="shape:box" obj-model="obj: #Shelf" position="3.38 3.2 -2.005" rotation="0 -57.361 0" scale=".015 .015 .015" material="src: #Shelves;">
+    </a-entity>
+    <a-entity static-body="shape:box" obj-model="obj: #Shelf" position="-3.38 .5 -2.005" rotation="0 57.361 0" scale=".015 .015 .015" material="src: #Shelves;">
+    </a-entity>
+    <a-entity static-body="shape:box" obj-model="obj: #Shelf" position="-3.38 3.2 -2.005" rotation="0 57.361 0" scale=".015 .015 .015" material="src: #Shelves;">
+    </a-entity>
+    <a-entity static-body="shape:box" obj-model="obj: #Shelf" position="0 .5 3.5255" rotation="0 180 0" scale=".015 .015 .015" material="src: #Shelves;">
+    </a-entity>
+    <a-entity static-body="shape:box" obj-model="obj: #Shelf" position="0 3.2 3.5255" rotation="0 180 0" scale=".015 .015 .015" material="src: #Shelves;">
+    </a-entity>
+    <a-entity static-body="shape:box" obj-model="obj: #Shelf" position="-3.38 .5 2.005" rotation="0 -237.361 0" scale=".015 .015 .015" material="src: #Shelves;">
+    </a-entity>
+    <a-entity static-body="shape:box" obj-model="obj: #Shelf" position="-3.38 3.2 2.005" rotation="0 -237.361 0" scale=".015 .015 .015" material="src: #Shelves;">
+    </a-entity>
+    <a-entity static-body="shape:box" obj-model="obj: #Shelf" position="3.38 .5 2.005" rotation="0 237.361 0" scale=".015 .015 .015" material="src: #Shelves;">
+    </a-entity>
+    <a-entity static-body="shape:box" obj-model="obj: #Shelf" position="3.38 3.2 2.005" rotation="0 237.361 0" scale=".015 .015 .015" material="src: #Shelves;">
+    </a-entity>
+
+<!-- Front Bottom Bookshelf -->
+  <!-- Top Shelf -->
+    <a-box position="0.05 2.9 -3.5255" scale=".1 .5 .35" href="Page5.html" color="#6bff6b">
+    </a-box>
+    <a-box position=".16 2.9 -3.5255" scale=".1 .5 .35" href="Page6.html" color="#eb4034">
+    </a-box>
+    <a-box position=".415 2.85 -3.5255" scale=".1 .5 .35" rotation="0 0 45" href="Page7.html" color="#9d4de3">
+    </a-box>
+    <a-box position=".7 2.9 -3.5255" scale=".1 .5 .35" color="#6cf5ec">
+    </a-box>
+    <a-box position="-.16 2.9 -3.5255" scale=".1 .5 .35" rotation="0 0 25" href="Page4.html" color="#ffd000">
+    </a-box>
+    <a-box position="-.37 2.85 -3.5255" scale=".125 .45 .35" href="Page3.html" color="#ff99e7">
+    </a-box>
+    <a-box position="-.5 2.9 -3.5255" scale=".1 .5 .35" color="#f5870a">
+    </a-box>
+    <a-box position="-.65 2.85 -3.5255" scale=".15 .4 .35" href="Page2.html" color="#0a12f5">
+    </a-box>
+  <!-- 2nd to Top Shelf -->
+    <a-box position=".7 2.35 -3.5255" scale=".1 .5 .35" href="Page5.html" color="#6bff6b">
+    </a-box>
+    <a-box position="-.5 2.15 -3.5255" scale=".5 .1 .35" href="Page6.html" color="#eb4034">
+    </a-box>
+    <a-box position="-.5 2.26 -3.5255" scale=".45 .12 .35" href="Page7.html" color="#9d4de3">
+    </a-box>
+    <a-box position="-.19 2.35 -3.5255" scale=".1 .5 .35" color="#6cf5ec">
+    </a-box>
+    <a-box position="-.08 2.35 -3.5255" scale=".1 .5 .35" href="Page4.html" color="#ffd000">
+    </a-box>
+    <a-box position=".58 2.35 -3.5255" scale=".1 .5 .35" href="Page3.html" color="#ff99e7">
+    </a-box>
+    <a-box position=".065 2.3 -3.5255" scale=".15 .4 .35" color="#f5870a">
+    </a-box>
+    <a-box position=".46 2.35 -3.5255" scale=".1 .5 .35" href="Page2.html" color="#0a12f5">
+    </a-box>
+    <a-box position=".27 2.35 -3.5255" scale=".1 .5 .35" rotation="0 0 -20" color="#4df7b6">
+    </a-box>
+  <!-- Middle Shelf -->
+    <a-box position="-.64 1.82 -3.5255" rotation="0 0 20" scale=".1 .45 .35" href="Page5.html" color="#6bff6b">
+    </a-box>
+    <a-box position="-.45 1.85 -3.5255" scale=".1 .5 .35" href="Page6.html" color="#eb4034">
+    </a-box>
+    <a-box position="-.325 1.85 -3.5255" scale=".1 .5 .35" color="#6cf5ec">
+    </a-box>
+    <a-box position="-.2 1.85 -3.5255" scale=".1 .5 .35" href="Page7.html" color="#9d4de3">
+    </a-box>
+    <a-box position=".7 1.85 -3.5255" scale=".1 .5 .35" href="Page4.html" color="#ffd000">
+    </a-box>
+    <a-box position="-0.05 1.8 -3.5255" scale=".125 .45 .35" href="Page3.html" color="#ff99e7">
+    </a-box>
+    <a-box position=".3 1.655 -3.5255" scale=".5 .1 .35" color="#f5870a">
+    </a-box>
+    <a-box position=".3 1.78 -3.5255" scale=".455 .122 .35" href="Page2.html" color="#0a12f5">
+    </a-box>
+    <a-box position=".3 1.895 -3.5255" scale=".4 .1 .35" color="#b48cff">
+    </a-box>
+  <!-- 2nd to Bottom Shelf -->
+    <a-box position=".65 1.3 -3.5255" scale=".15 -.35 .35" href="Page5.html" color="#6bff6b">
+    </a-box>
+    <a-box position="-.015 1.35 -3.5255" scale=".1 .45 .35" href="Page6.html" color="#eb4034">
+    </a-box>
+    <a-box position="-.13 1.35 -3.5255" scale=".1 .45 .35" color="#6cf5ec">
+    </a-box>
+    <a-box position=".37 1.35 -3.5255" rotation="0 0 -45" scale=".1 .5 .5" href="Page7.html" color="#9d4de3">
+    </a-box>
+    <a-box position=".1 1.35 -3.5255" scale=".1 .45 .35" href="Page4.html" color="#ffd000">
+    </a-box>
+    <a-box position="-0.48 1.15 -3.5255" scale=".55 .125 .35" href="Page3.html" color="#ff99e7">
+    </a-box>
+    <a-box position="-0.48 1.27 -3.5255" scale=".45 .1 .35" color="#b48cff">
+    </a-box>
+  <!-- Bottom Shelf -->
+    <a-box position="-.7 .85 -3.5255" scale=".1 -.5 .35" href="Page5.html" color="#6bff6b">
+    </a-box>
+    <a-box position="0.04 .75 -3.5255" scale=".375 .1 .35" href="Page6.html" color="#eb4034">
+    </a-box>
+    <a-box position=".55 .85 -3.5255" scale=".1 .5 .35" href="Page7.html" color="#9d4de3">
+    </a-box>
+    <a-box position=".7 .85 -3.5255" scale=".15 .4 .35" color="#6cf5ec">
+    </a-box>
+    <a-box position=".425 .85 -3.5255" scale=".1 .5 .35" href="Page4.html" color="#ffd000">
+    </a-box>
+    <a-box position="-.5 .85 -3.5255" rotation="0 0 -40" scale=".1 .4 .35" href="Page3.html" color="#ff99e7">
+    </a-box>
+    <a-box position="-.25 .85 -3.5255" scale=".125 .45 .35" color="#f5870a">
+    </a-box>
+    <a-box position=".3 .85 -3.5255" scale=".1 .5 .35" href="Page2.html" color="#0a12f5">
+    </a-box>
+
+<!-- Front Top Bookshelf -->
+  <!-- Top Shelf -->
+    <a-box position="0.05 5.6 -3.5255" scale=".1 .5 .35" href="Page5.html" color="#6bff6b">
+    </a-box>
+    <a-box position=".16 5.6 -3.5255" scale=".1 .5 .35" href="Page6.html" color="#eb4034">
+    </a-box>
+    <a-box position=".415 5.55 -3.5255" scale=".1 .5 .35" rotation="0 0 45" href="Page7.html" color="#9d4de3">
+    </a-box>
+    <a-box position=".7 5.6 -3.5255" scale=".1 .5 .35" color="#6cf5ec">
+    </a-box>
+    <a-box position="-.16 5.6 -3.5255" scale=".1 .5 .35" rotation="0 0 25" href="Page4.html" color="#ffd000">
+    </a-box>
+    <a-box position="-.37 5.55 -3.5255" scale=".125 .45 .35" href="Page3.html" color="#ff99e7">
+    </a-box>
+    <a-box position="-.5 5.6 -3.5255" scale=".1 .5 .35" color="#f5870a">
+    </a-box>
+    <a-box position="-.65 5.55 -3.5255" scale=".15 .4 .35" href="Page2.html" color="#0a12f5">
+    </a-box>
+  <!-- 2nd to Top Shelf -->
+    <a-box position=".7 5.05 -3.5255" scale=".1 .5 .35" href="Page5.html" color="#6bff6b">
+    </a-box>
+    <a-box position="-.5 4.85 -3.5255" scale=".5 .1 .35" href="Page6.html" color="#eb4034">
+    </a-box>
+    <a-box position="-.5 4.96 -3.5255" scale=".45 .12 .35" href="Page7.html" color="#9d4de3">
+    </a-box>
+    <a-box position="-.19 5.05 -3.5255" scale=".1 .5 .35" color="#6cf5ec">
+    </a-box>
+    <a-box position="-.08 5.05 -3.5255" scale=".1 .5 .35" href="Page4.html" color="#ffd000">
+    </a-box>
+    <a-box position=".58 5.05 -3.5255" scale=".1 .5 .35" href="Page3.html" color="#ff99e7">
+    </a-box>
+    <a-box position=".065 5 -3.5255" scale=".15 .4 .35" color="#f5870a">
+    </a-box>
+    <a-box position=".46 5.05 -3.5255" scale=".1 .5 .35" href="Page2.html" color="#0a12f5">
+    </a-box>
+    <a-box position=".27 5.05 -3.5255" scale=".1 .5 .35" rotation="0 0 -20" color="#4df7b6">
+    </a-box>
+  <!-- Middle Shelf -->
+    <a-box position="-.64 4.52 -3.5255" rotation="0 0 20" scale=".1 .45 .35" href="Page5.html" color="#6bff6b">
+    </a-box>
+    <a-box position="-.45 4.55 -3.5255" scale=".1 .5 .35" href="Page6.html" color="#eb4034">
+    </a-box>
+    <a-box position="-.325 4.55 -3.5255" scale=".1 .5 .35" color="#6cf5ec">
+    </a-box>
+    <a-box position="-.2 4.55 -3.5255" scale=".1 .5 .35" href="Page7.html" color="#9d4de3">
+    </a-box>
+    <a-box position=".7 4.55 -3.5255" scale=".1 .5 .35" href="Page4.html" color="#ffd000">
+    </a-box>
+    <a-box position="-0.05 4.5 -3.5255" scale=".125 .45 .35" href="Page3.html" color="#ff99e7">
+    </a-box>
+    <a-box position=".3 4.355 -3.5255" scale=".5 .1 .35" color="#f5870a">
+    </a-box>
+    <a-box position=".3 4.48 -3.5255" scale=".455 .122 .35" href="Page2.html" color="#0a12f5">
+    </a-box>
+    <a-box position=".3 4.595 -3.5255" scale=".4 .1 .35" color="#b48cff">
+    </a-box>
+  <!-- 2nd to Bottom Shelf -->
+    <a-box position=".65 4 -3.5255" scale=".15 -.35 .35" href="Page5.html" color="#6bff6b">
+    </a-box>
+    <a-box position="-.015 4.05 -3.5255" scale=".1 .45 .35" href="Page6.html" color="#eb4034">
+    </a-box>
+    <a-box position="-.13 4.05 -3.5255" scale=".1 .45 .35" color="#6cf5ec">
+    </a-box>
+    <a-box position=".37 4.05 -3.5255" rotation="0 0 -45" scale=".1 .5 .5" href="Page7.html" color="#9d4de3">
+    </a-box>
+    <a-box position=".1 4.05 -3.5255" scale=".1 .45 .35" href="Page4.html" color="#ffd000">
+    </a-box>
+    <a-box position="-0.48 3.85 -3.5255" scale=".55 .125 .35" href="Page3.html" color="#ff99e7">
+    </a-box>
+    <a-box position="-0.48 4 -3.5255" scale=".45 .1 .35" color="#b48cff">
+    </a-box>
+  <!-- Bottom Shelf -->
+    <a-box position="-.7 3.55 -3.5255" scale=".1 -.5 .35" href="Page5.html" color="#6bff6b">
+    </a-box>
+    <a-box position="0.04 3.45 -3.5255" scale=".375 .1 .35" href="Page6.html" color="#eb4034">
+    </a-box>
+    <a-box position=".55 3.55 -3.5255" scale=".1 .5 .35" href="Page7.html" color="#9d4de3">
+    </a-box>
+    <a-box position=".7 3.55 -3.5255" scale=".15 .4 .35" color="#6cf5ec">
+    </a-box>
+    <a-box position=".425 3.55 -3.5255" scale=".1 .5 .35" href="Page4.html" color="#ffd000">
+    </a-box>
+    <a-box position="-.5 3.55 -3.5255" rotation="0 0 -40" scale=".1 .4 .35" href="Page3.html" color="#ff99e7">
+    </a-box>
+    <a-box position="-.25 3.55 -3.5255" scale=".125 .45 .35" color="#f5870a">
+    </a-box>
+    <a-box position=".3 3.55 -3.5255" scale=".1 .5 .35" href="Page2.html" color="#0a12f5">
+    </a-box>
+
+<!-- Back Bottom Bookshelf -->
+  <!-- Top Shelf -->
+    <a-box position="0.05 2.9 3.5255" scale=".1 .5 .35" href="Page5.html" color="#6bff6b">
+    </a-box>
+    <a-box position=".16 2.9 3.5255" scale=".1 .5 .35" href="Page6.html" color="#eb4034">
+    </a-box>
+    <a-box position=".415 2.85 3.5255" scale=".1 .5 .35" rotation="0 0 45" href="Page7.html" color="#9d4de3">
+    </a-box>
+    <a-box position=".7 2.9 3.5255" scale=".1 .5 .35" color="#6cf5ec">
+    </a-box>
+    <a-box position="-.16 2.9 3.5255" scale=".1 .5 .35" rotation="0 0 25" href="Page4.html" color="#ffd000">
+    </a-box>
+    <a-box position="-.37 2.85 3.5255" scale=".125 .45 .35" href="Page3.html" color="#ff99e7">
+    </a-box>
+    <a-box position="-.5 2.9 3.5255" scale=".1 .5 .35" color="#f5870a">
+    </a-box>
+    <a-box position="-.65 2.85 3.5255" scale=".15 .4 .35" href="Page2.html" color="#0a12f5">
+    </a-box>
+  <!-- 2nd to Top Shelf -->
+    <a-box position=".7 2.35 3.5255" scale=".1 .5 .35" href="Page5.html" color="#6bff6b">
+    </a-box>
+    <a-box position="-.5 2.15 3.5255" scale=".5 .1 .35" href="Page6.html" color="#eb4034">
+    </a-box>
+    <a-box position="-.5 2.26 3.5255" scale=".45 .12 .35" href="Page7.html" color="#9d4de3">
+    </a-box>
+    <a-box position="-.19 2.35 3.5255" scale=".1 .5 .35" color="#6cf5ec">
+    </a-box>
+    <a-box position="-.08 2.35 3.5255" scale=".1 .5 .35" href="Page4.html" color="#ffd000">
+    </a-box>
+    <a-box position=".58 2.35 3.5255" scale=".1 .5 .35" href="Page3.html" color="#ff99e7">
+    </a-box>
+    <a-box position=".065 2.3 3.5255" scale=".15 .4 .35" color="#f5870a">
+    </a-box>
+    <a-box position=".46 2.35 3.5255" scale=".1 .5 .35" href="Page2.html" color="#0a12f5">
+    </a-box>
+    <a-box position=".27 2.35 3.5255" scale=".1 .5 .35" rotation="0 0 -20" color="#4df7b6">
+    </a-box>
+  <!-- Middle Shelf -->
+    <a-box position="-.64 1.82 3.5255" rotation="0 0 20" scale=".1 .45 .35" href="Page5.html" color="#6bff6b">
+    </a-box>
+    <a-box position="-.45 1.85 3.5255" scale=".1 .5 .35" href="Page6.html" color="#eb4034">
+    </a-box>
+    <a-box position="-.325 1.85 3.5255" scale=".1 .5 .35" color="#6cf5ec">
+    </a-box>
+    <a-box position="-.2 1.85 3.5255" scale=".1 .5 .35" href="Page7.html" color="#9d4de3">
+    </a-box>
+    <a-box position=".7 1.85 3.5255" scale=".1 .5 .35" href="Page4.html" color="#ffd000">
+    </a-box>
+    <a-box position="-0.05 1.8 3.5255" scale=".125 .45 .35" href="Page3.html" color="#ff99e7">
+    </a-box>
+    <a-box position=".3 1.655 3.5255" scale=".5 .1 .35" color="#f5870a">
+    </a-box>
+    <a-box position=".3 1.78 3.5255" scale=".455 .122 .35" href="Page2.html" color="#0a12f5">
+    </a-box>
+    <a-box position=".3 1.895 3.5255" scale=".4 .1 .35" color="#b48cff">
+    </a-box>
+  <!-- 2nd to Bottom Shelf -->
+    <a-box position=".65 1.3 3.5255" scale=".15 -.35 .35" href="Page5.html" color="#6bff6b">
+    </a-box>
+    <a-box position="-.015 1.35 3.5255" scale=".1 .45 .35" href="Page6.html" color="#eb4034">
+    </a-box>
+    <a-box position="-.13 1.35 3.5255" scale=".1 .45 .35" color="#6cf5ec">
+    </a-box>
+    <a-box position=".37 1.35 3.5255" rotation="0 0 -45" scale=".1 .5 .5" href="Page7.html" color="#9d4de3">
+    </a-box>
+    <a-box position=".1 1.35 3.5255" scale=".1 .45 .35" href="Page4.html" color="#ffd000">
+    </a-box>
+    <a-box position="-0.48 1.15 3.5255" scale=".55 .125 .35" href="Page3.html" color="#ff99e7">
+    </a-box>
+    <a-box position="-0.48 1.27 3.5255" scale=".45 .1 .35" color="#b48cff">
+    </a-box>
+  <!-- Bottom Shelf -->
+    <a-box position="-.7 .85 3.5255" scale=".1 -.5 .35" href="Page5.html" color="#6bff6b">
+    </a-box>
+    <a-box position="0.04 .75 3.5255" scale=".375 .1 .35" href="Page6.html" color="#eb4034">
+    </a-box>
+    <a-box position=".55 .85 3.5255" scale=".1 .5 .35" href="Page7.html" color="#9d4de3">
+    </a-box>
+    <a-box position=".7 .85 3.5255" scale=".15 .4 .35" color="#6cf5ec">
+    </a-box>
+    <a-box position=".425 .85 3.5255" scale=".1 .5 .35" href="Page4.html" color="#ffd000">
+    </a-box>
+    <a-box position="-.5 .85 3.5255" rotation="0 0 -40" scale=".1 .4 .35" href="Page3.html" color="#ff99e7">
+    </a-box>
+    <a-box position="-.25 .85 3.5255" scale=".125 .45 .35" color="#f5870a">
+    </a-box>
+    <a-box position=".3 .85 3.5255" scale=".1 .5 .35" href="Page2.html" color="#0a12f5">
+    </a-box>
+
+<!-- Back Top Bookshelf -->
+  <!-- Top Shelf -->
+    <a-box position="0.05 5.6 3.5255" scale=".1 .5 .35" href="Page5.html" color="#6bff6b">
+    </a-box>
+    <a-box position=".16 5.6 3.5255" scale=".1 .5 .35" href="Page6.html" color="#eb4034">
+    </a-box>
+    <a-box position=".415 5.55 3.5255" scale=".1 .5 .35" rotation="0 0 45" href="Page7.html" color="#9d4de3">
+    </a-box>
+    <a-box position=".7 5.6 3.5255" scale=".1 .5 .35" color="#6cf5ec">
+    </a-box>
+    <a-box position="-.16 5.6 3.5255" scale=".1 .5 .35" rotation="0 0 25" href="Page4.html" color="#ffd000">
+    </a-box>
+    <a-box position="-.37 5.55 3.5255" scale=".125 .45 .35" href="Page3.html" color="#ff99e7">
+    </a-box>
+    <a-box position="-.5 5.6 3.5255" scale=".1 .5 .35" color="#f5870a">
+    </a-box>
+    <a-box position="-.65 5.55 3.5255" scale=".15 .4 .35" href="Page2.html" color="#0a12f5">
+    </a-box>
+  <!-- 2nd to Top Shelf -->
+    <a-box position=".7 5.05 3.5255" scale=".1 .5 .35" href="Page5.html" color="#6bff6b">
+    </a-box>
+    <a-box position="-.5 4.85 3.5255" scale=".5 .1 .35" href="Page6.html" color="#eb4034">
+    </a-box>
+    <a-box position="-.5 4.96 3.5255" scale=".45 .12 .35" href="Page7.html" color="#9d4de3">
+    </a-box>
+    <a-box position="-.19 5.05 3.5255" scale=".1 .5 .35" color="#6cf5ec">
+    </a-box>
+    <a-box position="-.08 5.05 3.5255" scale=".1 .5 .35" href="Page4.html" color="#ffd000">
+    </a-box>
+    <a-box position=".58 5.05 3.5255" scale=".1 .5 .35" href="Page3.html" color="#ff99e7">
+    </a-box>
+    <a-box position=".065 5 3.5255" scale=".15 .4 .35" color="#f5870a">
+    </a-box>
+    <a-box position=".46 5.05 3.5255" scale=".1 .5 .35" href="Page2.html" color="#0a12f5">
+    </a-box>
+    <a-box position=".27 5.05 3.5255" scale=".1 .5 .35" rotation="0 0 -20" color="#4df7b6">
+    </a-box>
+  <!-- Middle Shelf -->
+    <a-box position="-.64 4.52 3.5255" rotation="0 0 20" scale=".1 .45 .35" href="Page5.html" color="#6bff6b">
+    </a-box>
+    <a-box position="-.45 4.55 3.5255" scale=".1 .5 .35" href="Page6.html" color="#eb4034">
+    </a-box>
+    <a-box position="-.325 4.55 3.5255" scale=".1 .5 .35" color="#6cf5ec">
+    </a-box>
+    <a-box position="-.2 4.55 3.5255" scale=".1 .5 .35" href="Page7.html" color="#9d4de3">
+    </a-box>
+    <a-box position=".7 4.55 3.5255" scale=".1 .5 .35" href="Page4.html" color="#ffd000">
+    </a-box>
+    <a-box position="-0.05 4.5 3.5255" scale=".125 .45 .35" href="Page3.html" color="#ff99e7">
+    </a-box>
+    <a-box position=".3 4.355 3.5255" scale=".5 .1 .35" color="#f5870a">
+    </a-box>
+    <a-box position=".3 4.48 3.5255" scale=".455 .122 .35" href="Page2.html" color="#0a12f5">
+    </a-box>
+    <a-box position=".3 4.595 3.5255" scale=".4 .1 .35" color="#b48cff">
+    </a-box>
+  <!-- 2nd to Bottom Shelf -->
+    <a-box position=".65 4 3.5255" scale=".15 -.35 .35" href="Page5.html" color="#6bff6b">
+    </a-box>
+    <a-box position="-.015 4.05 3.5255" scale=".1 .45 .35" href="Page6.html" color="#eb4034">
+    </a-box>
+    <a-box position="-.13 4.05 3.5255" scale=".1 .45 .35" color="#6cf5ec">
+    </a-box>
+    <a-box position=".37 4.05 3.5255" rotation="0 0 -45" scale=".1 .5 .5" href="Page7.html" color="#9d4de3">
+    </a-box>
+    <a-box position=".1 4.05 3.5255" scale=".1 .45 .35" href="Page4.html" color="#ffd000">
+    </a-box>
+    <a-box position="-0.48 3.85 3.5255" scale=".55 .125 .35" href="Page3.html" color="#ff99e7">
+    </a-box>
+    <a-box position="-0.48 4 3.5255" scale=".45 .1 .35" color="#b48cff">
+    </a-box>
+  <!-- Bottom Shelf -->
+    <a-box position="-.7 3.55 3.5255" scale=".1 -.5 .35" href="Page5.html" color="#6bff6b">
+    </a-box>
+    <a-box position="0.04 3.45 3.5255" scale=".375 .1 .35" href="Page6.html" color="#eb4034">
+    </a-box>
+    <a-box position=".55 3.55 3.5255" scale=".1 .5 .35" href="Page7.html" color="#9d4de3">
+    </a-box>
+    <a-box position=".7 3.55 3.5255" scale=".15 .4 .35" color="#6cf5ec">
+    </a-box>
+    <a-box position=".425 3.55 3.5255" scale=".1 .5 .35" href="Page4.html" color="#ffd000">
+    </a-box>
+    <a-box position="-.5 3.55 3.5255" rotation="0 0 -40" scale=".1 .4 .35" href="Page3.html" color="#ff99e7">
+    </a-box>
+    <a-box position="-.25 3.55 3.5255" scale=".125 .45 .35" color="#f5870a">
+    </a-box>
+    <a-box position=".3 3.55 3.5255" scale=".1 .5 .35" href="Page2.html" color="#0a12f5">
+    </a-box>
+
+<!-- Walls -->
+    <a-box static-body="shape:box" position="4 3 0" rotation="0 0 0" width=".1" height="8" depth="7.9" color="#4d4d4d">
+    </a-box>
+    <a-box static-body="shape:box" position="-4 3 0" rotation="0 0 0" width=".1" height="8" depth="7.9" color="#4d4d4d">
+    </a-box>
+    <a-box static-body="shape:box" position="0 3 4" rotation="0 0 0" width="7.9" height="8" depth=".1" color="#4d4d4d">
+    </a-box>
+    <a-box static-body="shape:box" position="0 3 -4" rotation="0 0 0" width="7.9" height="8" depth=".1" color="#4d4d4d">
+    </a-box>
+
+<!-- Ground -->
+    <a-box static-body="shape:box" position="0 0 0" rotation="0 0 0" width="8" height="1" depth="8" color="#d61313">
+      </a-box>
+
+<!-- Ceiling -->
+    <a-box position="0 6.5 0" rotation="0 0 0" width="8" height="1" depth="8" color="#4d4d4d">
+      </a-box>
+
+    </a-scene>
+
+</body></html>

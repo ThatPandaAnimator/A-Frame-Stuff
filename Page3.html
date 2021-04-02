@@ -1,0 +1,382 @@
+<!DOCTYPE html><html><head>
+        <meta charset="UTF-8">
+        <title>A-Frame</title>
+            <!-- A-Frame library -->
+      <script src="aframe.min.js"></script>
+
+      <!-- A-Frame physics library -->
+      <script src="aframe-physics-system.min.js"></script>
+
+      <!-- A-Frame extras library for vr controlers and other stuff  -->
+      <script src="aframe-extras.min.js"></script>
+
+      <!-- A-Frame HREF component library -->
+      <script src="a-frame-href.js"></script>
+
+      <!-- particle system library -->
+      <script src="aframe-particle-system-component.min.js">         </script>
+
+      <!-- efor the nav mesh -->
+      <script src="aframe-inspector-plugin-recast.js"></script>
+
+    </head>
+    <body>
+    <a-scene physics="" cursor="rayOrigin: mouse">
+      
+<!-- Camera -->
+      <a-entity id="rig" position="0 1.5 -2" movement-controls="">
+      <a-entity id="camera" camera="" look-controls=""></a-entity>
+      <a-box id="box1" dynamic-body="shape: box; mass:0" visible="false" position="0 0 0" width=".25" height=".25" depth=".25"></a-box>
+    </a-entity>
+      
+<!-- Assets -->
+      <a-assets img="" src="Home.jpg" id="Home"> </a-assets>
+
+<!-- Home  Platform-->
+    <a-box static-body="shape:box" position="0 0 0" rotation="0 0 0" width="5" height="1" depth="5" color="#ffffff">
+    </a-box>
+
+<!-- Rotating  Platforms 1-->
+    <a-entity rotation="0 0 0" animation="property: rotation; 
+        to: 0 0 360; 
+        loop: true;
+        dir: alternate;
+        dur: 10000">
+      <a-box static-body="shape:box" position="0 10 0" rotation="0 0 0" width="5" height="1" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" animation="property: rotation; 
+        to: 0 0 360; 
+        loop: true;
+        dir: alternate;
+        dur: 10000">
+      <a-box static-body="shape:box" position="0 -10 0" rotation="0 0 0" width="5" height="1" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+
+    <a-entity rotation="0 0 0" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="10 0 0" rotation="0 0 0" width="1" height="5" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="-10 0 0" rotation="0 0 0" width="1" height="5" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="0 0 -10" rotation="0 0 0" width="5" height="5" depth="1" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="0 0 10" rotation="0 0 0" width="5" height="5" depth="1" color="#ffffff">
+      </a-box>
+    </a-entity>
+
+<!-- Rotating  Platforms 2-->
+    <a-entity rotation="0 0 0" position="10 20 10" animation="property: rotation; 
+        to: 0 0 360; 
+        loop: true;
+        dir: alternate;
+        dur: 10000">
+      <a-box static-body="shape:box" position="10 20 10" rotation="0 0 0" width="5" height="1" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="10 0 10" animation="property: rotation; 
+        to: 0 0 360; 
+        loop: true;
+        dir: alternate;
+        dur: 10000">
+      <a-box static-body="shape:box" position="10 0 10" rotation="0 0 0" width="5" height="1" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+
+    <a-entity rotation="0 0 0" position="20 10 10" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="20 10 10" rotation="0 0 0" width="1" height="5" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="0 10 10" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="0 10 10" rotation="0 0 0" width="1" height="5" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="10 10 0" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="10 10 0" rotation="0 0 0" width="5" height="5" depth="1" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="10 10 20" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="10 10 20" rotation="0 0 0" width="5" height="5" depth="1" color="#ffffff">
+      </a-box>
+    </a-entity>
+
+<!-- Rotating  Platforms 3-->
+    <a-entity rotation="0 0 0" position="-20 -10 -20" animation="property: rotation; 
+        to: 0 0 360; 
+        loop: true;
+        dir: alternate;
+        dur: 10000">
+      <a-box static-body="shape:box" position="-20 -10 -20" rotation="0 0 0" width="5" height="1" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="-10 -20 -10" animation="property: rotation; 
+        to: 0 0 360; 
+        loop: true;
+        dir: alternate;
+        dur: 10000">
+      <a-box static-body="shape:box" position="-10 -20 -10" rotation="0 0 0" width="5" height="1" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+
+    <a-entity rotation="0 0 0" position="0 -10 -10" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="0 -10 -10" rotation="0 0 0" width="1" height="5" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="-20 -10 -10" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="-20 -10 -10" rotation="0 0 0" width="1" height="5" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="-10 -10 -20" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="-10 -10 -20" rotation="0 0 0" width="5" height="5" depth="1" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="-10 -10 0" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="-10 -10 0" rotation="0 0 0" width="5" height="5" depth="1" color="#ffffff">
+      </a-box>
+    </a-entity>
+      
+<!-- Rotating  Platforms 4-->
+    <a-entity rotation="0 0 0" position="-10 20 -10" animation="property: rotation; 
+        to: 0 0 360; 
+        loop: true;
+        dir: alternate;
+        dur: 10000">
+      <a-box static-body="shape:box" position="-10 20 -10" rotation="0 0 0" width="5" height="1" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="-10 0 -10" animation="property: rotation; 
+        to: 0 0 360; 
+        loop: true;
+        dir: alternate;
+        dur: 10000">
+      <a-box static-body="shape:box" position="-10 0 -10" rotation="0 0 0" width="5" height="1" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+
+    <a-entity rotation="0 0 0" position="-20 10 -10" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="-20 10 -10" rotation="0 0 0" width="1" height="5" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="0 10 -10" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="0 10 -10" rotation="0 0 0" width="1" height="5" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="-10 10 0" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="-10 10 0" rotation="0 0 0" width="5" height="5" depth="1" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="-10 10 -20" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="-10 10 -20" rotation="0 0 0" width="5" height="5" depth="1" color="#ffffff">
+      </a-box>
+    </a-entity>
+
+<!-- Rotating  Platforms 5-->
+    <a-entity rotation="0 0 0" position="20 -10 20" animation="property: rotation; 
+        to: 0 0 360; 
+        loop: true;
+        dir: alternate;
+        dur: 10000">
+      <a-box static-body="shape:box" position="20 -10 20" rotation="0 0 0" width="5" height="1" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="10 -20 10" animation="property: rotation; 
+        to: 0 0 360; 
+        loop: true;
+        dir: alternate;
+        dur: 10000">
+      <a-box static-body="shape:box" position="10 -20 10" rotation="0 0 0" width="5" height="1" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+
+    <a-entity rotation="0 0 0" position="0 -10 10" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="0 -10 10" rotation="0 0 0" width="1" height="5" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="20 -10 10" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="20 -10 10" rotation="0 0 0" width="1" height="5" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="10 -10 20" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="10 -10 20" rotation="0 0 0" width="5" height="5" depth="1" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="10 -10 0" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="10 -10 0" rotation="0 0 0" width="5" height="5" depth="1" color="#ffffff">
+      </a-box>
+    </a-entity>
+
+<!-- Rotating  Platforms 6-->
+    <a-entity rotation="0 0 0" position="-10 20 10" animation="property: rotation; 
+        to: 0 0 360; 
+        loop: true;
+        dir: alternate;
+        dur: 10000">
+      <a-box static-body="shape:box" position="-10 20 10" rotation="0 0 0" width="5" height="1" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="-10 0 10" animation="property: rotation; 
+        to: 0 0 360; 
+        loop: true;
+        dir: alternate;
+        dur: 10000">
+      <a-box static-body="shape:box" position="-10 0 10" rotation="0 0 0" width="5" height="1" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+
+    <a-entity rotation="0 0 0" position="-20 10 10" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="-20 10 10" rotation="0 0 0" width="1" height="5" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="0 10 10" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="0 10 10" rotation="0 0 0" width="1" height="5" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="-10 10 0" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="-10 10 0" rotation="0 0 0" width="5" height="5" depth="1" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="-10 10 20" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="-10 10 20" rotation="0 0 0" width="5" height="5" depth="1" color="#ffffff">
+      </a-box>
+    </a-entity>
+
+<!-- Rotating  Platforms 7-->
+    <a-entity rotation="0 0 0" position="-20 -10 20" animation="property: rotation; 
+        to: 0 0 360; 
+        loop: true;
+        dir: alternate;
+        dur: 10000">
+      <a-box static-body="shape:box" position="-20 -10 20" rotation="0 0 0" width="5" height="1" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="-10 -20 10" animation="property: rotation; 
+        to: 0 0 360; 
+        loop: true;
+        dir: alternate;
+        dur: 10000">
+      <a-box static-body="shape:box" position="-10 -20 10" rotation="0 0 0" width="5" height="1" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+
+    <a-entity rotation="0 0 0" position="0 -10 10" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="0 -10 10" rotation="0 0 0" width="1" height="5" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="-20 -10 10" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="-20 -10 10" rotation="0 0 0" width="1" height="5" depth="5" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="-10 -10 20" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="-10 -10 20" rotation="0 0 0" width="5" height="5" depth="1" color="#ffffff">
+      </a-box>
+    </a-entity>
+    <a-entity rotation="0 0 0" position="-10 -10 0" animation="property: rotation; 
+        to: 0 360 0; 
+        loop: true; 
+        dur: 10000">
+      <a-box static-body="shape:box" position="-10 -10 0" rotation="0 0 0" width="5" height="5" depth="1" color="#ffffff">
+      </a-box>
+    </a-entity>
+      
+<!-- Home Portal-->
+      <a-box position="0 1.5 0" scale="1 1 1" href="index.html" material="src: #Home" animation="property: rotation; 
+        to: 720 360 360; 
+        dur: 6000;
+        dir: alternate;
+        easing: linear; 
+        loop: true">
+      </a-box>
+      
+<!-- Sky -->
+      <a-sky rotation="0 0 270" color="#000000">
+      </a-sky>
+    </a-scene>
+    
+</body></html>

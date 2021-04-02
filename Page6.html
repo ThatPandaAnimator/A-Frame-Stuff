@@ -1,0 +1,85 @@
+<!DOCTYPE html><html><head>
+        <meta charset="UTF-8">
+        <title>A-Frame</title>
+            <!-- A-Frame library -->
+      <script src="aframe.min.js"></script>
+
+      <!-- A-Frame physics library -->
+      <script src="aframe-physics-system.min.js"></script>
+
+      <!-- A-Frame extras library for vr controlers and other stuff  -->
+      <script src="aframe-extras.min.js"></script>
+
+      <!-- A-Frame HREF component library -->
+      <script src="a-frame-href.js"></script>
+
+      <!-- particle system library -->
+      <script src="aframe-particle-system-component.min.js">         </script>
+
+      <!-- efor the nav mesh -->
+      <script src="aframe-inspector-plugin-recast.js"></script>
+
+    </head>
+    <body>
+    <a-scene physics="" cursor="rayOrigin: mouse">
+      
+<!-- Camera -->
+      <a-entity id="rig" position="0 1.5 0" movement-controls="">
+      <a-entity id="camera" camera="" look-controls="" wasd-controls="fly:true"></a-entity>
+      <a-box id="box1" dynamic-body="shape: box; mass:0" visible="false" position="0 0 0" width=".25" height=".25" depth=".25"></a-box>
+    </a-entity>  
+  
+<!-- Assets -->
+      <a-assets img="" src="Home.jpg" id="Home"> </a-assets>
+      
+<!-- Home  Platform-->
+    <a-box position="0 0 0" rotation="0 0 0" width="5" height="1" depth="5" color="#ffffff">
+    </a-box>
+      
+<!-- Video Island 1 -->
+    <a-box position="70 10 -55" scale="20 10 1" color="#c9c9c9">
+    </a-box>
+    <a-box position="70 5 -55" rotation="0 0 0" width="20" height="1" depth="20" color="#ffffff">
+    </a-box>
+    <a-box position="75 7 -50" rotation="0 0 0" width="5" height="3" depth="1" color="#ffffff">
+    </a-box>
+      
+<!-- Video Island 2 -->
+    <a-box position="69 -20 43" scale="1 10 20" color="#c9c9c9">
+    </a-box>
+    <a-box position="69 -25 43" rotation="0 0 0" width="20" height="1" depth="20" color="#ffffff">
+    </a-box>
+    <a-box position="62 -23 48" rotation="0 0 0" width="1" height="3" depth="5" color="#ffffff">
+    </a-box>
+      
+<!-- Video Island 3 -->
+    <a-box position="-28 -10 79" scale="-20 10 1" color="#c9c9c9">
+    </a-box>
+    <a-box position="-28 -15 79" rotation="0 0 0" width="20" height="1" depth="20" color="#ffffff">
+    </a-box>
+    <a-box position="-33 -13 74" rotation="0 0 0" width="5" height="3" depth="1" color="#ffffff">
+    </a-box>
+      
+<!-- Video Island 4 -->
+    <a-box position="-84 15 -62" scale="1 10 -20" color="#c9c9c9">
+    </a-box>
+    <a-box position="-84 10 -62" rotation="0 0 0" width="20" height="1" depth="20" color="#ffffff">
+    </a-box>
+    <a-box position="-79 12 -67" rotation="0 0 0" width="1" height="3" depth="5" color="#ffffff">
+    </a-box>
+
+<!-- Home Portal-->
+      <a-box position="0 5 -10" scale="1 1 1" href="index.html" material="src: #Home" animation="property: rotation; 
+        to: 720 360 360; 
+        dur: 6000;
+        dir: alternate;
+        easing: linear; 
+        loop: true">
+      </a-box>
+      
+<!-- Sky -->
+      <a-sky rotation="0 0 270" color="#000000">
+      </a-sky>
+    </a-scene>
+    
+</body></html>
